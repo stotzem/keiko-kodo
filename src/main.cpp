@@ -1,5 +1,5 @@
-#include "0001-0025.hpp"
-#include "Util.hpp"
+#include "project-euler.hpp"
+#include "util.hpp"
 
 int main(int argc, char **argv) {
     if (argc < 2) {
@@ -9,6 +9,9 @@ int main(int argc, char **argv) {
     switch (std::stoi(argv[1])) {
         case 1:
             printSolution(pe0001());
+            break;
+        case 2:
+            printSolution(pe0002());
             break;
         default:
             std::cout << "Unknown option: " << argv[1];
