@@ -22,3 +22,21 @@ int pe0002(int a) {
     }
     return answer;
 }
+
+long long pe0003(long long a) {
+    long answer = -1;
+    while (a % 2 == 0) {
+        answer = 2;
+        a /= 2;
+    }
+    for (long i = 3; i * i <= a; i += 2) {
+        while (a % i == 0) {
+            answer = i;
+            a /= i;
+        }
+    }
+    if (a > 2) {
+        answer = a;
+    }
+    return answer;
+}
